@@ -1,0 +1,25 @@
+<html>
+<script>
+var a= parseInt(prompt("enter the total no. of socks , in digit",10));
+var arr = [];
+for (var i=0; i<a ; i++)
+{
+arr.push(parseInt(prompt("enter the colour number , in digit"+(i+1))));
+}
+document.write(sac(a,arr));
+function sac(n,arr)
+{
+let sor = arr.sort((a,b )=> a-b);
+let count = 0;
+for (let i=0;i<n-1;i++)
+{
+if(sor[i]===sor[i+1])
+{
+count++;
+i+=1;
+}
+}
+return count;
+}
+</script>
+</html>
